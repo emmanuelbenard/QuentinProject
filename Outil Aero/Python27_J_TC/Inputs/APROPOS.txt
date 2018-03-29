@@ -1,0 +1,71 @@
+# Template for the input parameters file
+
+# Output
+output = ./Resultats/APROPOS.txt # output file
+
+# Numerical parameters
+EIS = 1 # Engine Influence Study : if no engine = 0, else = 1
+htail = 0 # boolean to know if horizontal tail in the study
+vtail = 0 # boolean to know if vertical tail in the study
+fus = 0 # boolean to know if fuselage in the study
+refPoint = 0 0 # X- and Z- coordinates of the reference point for moment coefficients wrt wing C/4 root chord, >0 if behind, above, assumed on the sum axis
+linear = 0 # Set 1 if linear study is desired, 0 in the opposite case
+
+# Flight conditions
+aMin = 0 # minimum angle of attack for the study
+beta = 0 #
+aMax = 5 # maximum angle of attack for the study
+deltaA = 0.2 # interval between each angle of attack during the study
+Mach = 0.1 # Flight mach number
+V0 = 1 # flight velocity (only influence when EIS = 1)
+h = 0 # flight altitude
+
+
+# General wing geometry
+b = 1.28 # span of the wing in meters
+cRoot = 0.24 # root chord in meters
+cTip = 0.24 # tip chord in meters
+twistTip = 0 # twist of the tip with respect to the root chord axis, negative washout
+cfToCLoc = 0 # ratio of the flaps length on the local chord length
+iW = 0 # incidence of the root section of the wing
+
+# Taper
+yTaperDisc =  # location of the sections were the taper ratio changes, let empty if none
+chord =  # array of the chord length at the section were the taper rate changes, let empty if none
+
+# Sweep
+ySweepDisc =  # location of the sections were the swept angle changes, let empty if none
+sweep = 0 # array of the swept angle at leading edge on each wing segment between the discontinuities, let empty if none
+
+# Twist
+yTwistDisc = # location of the sections were the twist rate changes, let empty if none
+twist =  # total twist angle at the discontinuity sections of twist, let empty if none
+
+# Dihedral
+yDihDisc =  # location of the sections were the dihedral angle changes, let empty if none
+Dih = 0 # dihedral angle on each wing segment between the discontinuities
+
+# Airfoil
+yDiscAf =  # location of the sections were the airfoil changes, let empty if none
+airfoil = ./PolarFiles/NACA642015.dat # airfoil used on each wing segment between the discontinuities
+
+# Polar
+yDiscPol = # location of the section were the polar file to use changes, let empty if none
+polarL = ./PolarFiles/naca642015.txt # polar files to use on each wing segment between the discontinuities, all on the same line!
+polarR = ./PolarFiles/naca642015.txt # polar files to use on each wing segment between the discontinuities, all on the same line!
+
+# Flaps defection
+yDiscFlaps =  # location of the section were the flaps defection changes, let empty if none
+deltaL = 0 # flaps deflection on the left half wing in degrees on each wing segment between the discontinuities, let empty if none
+deltaR = 0 # flaps deflection on the right half wing in degrees on each wing segment between the discontinuities, let empty if none. Must have the same number of values as deltaL
+
+# Engines
+nbE = 2 # number of engines
+D = 0.236 0.236 # propeler diameter in meters
+Rhub = 0.035 0.035 # radius of the engin hub
+yh = -0.18 0.18 # y location of the propelers on the span
+xh = 0 0 # x location of the propelers WITH RESPECT TO WING C/4 ROOT CHOORD
+zh = 0 0 # x location of the propelers WITH RESPECT TO WING C/4 ROOT CHOORD
+OWU = 0 0 # Outboard of the wing receives wind up direction
+Tc = 0.127 0.127
+J = 0.92 0.92

@@ -1,0 +1,7 @@
+Rien n'est fait en ce qui concerne le couplage "fort" entre les moteurs et l'aile :
+ pour le moment : simplement effet de moteur sur l'aile et pas de rebouclage.
+DEI donc pas opérationnel
+
+Check positive direction of the angle rate
+
+Compare drag options

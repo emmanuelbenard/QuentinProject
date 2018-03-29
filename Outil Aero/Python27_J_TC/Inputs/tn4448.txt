@@ -1,0 +1,164 @@
+# Template for the input parameters file
+
+
+# Output
+output = ./Resultats/naca4448V.txt # output file
+
+# Numerical parameters
+EIS = 1 # Engine Influence Study : if no engine = 0, else = 1
+htail = 0 # boolean to know if horizontal tail in the study
+vtail = 0 # boolean to know if vertical tail in the study
+fus = 1 # boolean to know if fuselage in the study
+refPoint = 2.37744 0 # X- and Z- coordinates of the reference point for moment coefficients wrt 
+	wing C/4 root chord, >0 if behind, above, assumed on the sym axis
+linear = 0 # Set 1 if linear study is desired, 0 in the opposite case
+
+# Flight conditions
+aMin = -8 # minimum angle of attack for the study
+aMax = 20 # maximum angle of attack for the study
+deltaA = 0.25 # interval between each angle of attack during the study
+beta = 0 # sideslip angle
+V0 = 25.1460 # flight velocity (only influence when EIS = 1)
+h = 0 # flight altitude (km)
+
+
+# General wing geometry
+b = 13.21 # span of the wing in meters
+iW = 0 # incidence of the root section of the wing
+cRoot = 2.98 # root chord in meters
+cTip = 1.65 # tip chord in meters
+twistTip = 0 # twist of the tip, negative washout
+cfToCLoc = 0 # ratio of the flaps length on the local chord length
+
+
+# Taper
+yTaperDisc =  # location of the sections were the taper ratio changes, let empty if none
+chord =  # array of the chord length at the section were the taper rate changes, let empty if none
+
+# Sweep
+ySweepDisc =  # location of the sections were the swept angle changes, let empty if none
+sweep = 0 # array of the swept angle at C/4 on each wing segment between the discontinuities, let empty if none
+
+# Airfoil
+yDiscAf = # location of the sections were the airfoil changes, let empty if none
+airfoil = ./PolarFiles/tn4448.dat # airfoil used on each wing segment between the discontinuities
+
+# Polar
+yDiscPol =  # location of the section were the polar file to use changes, let empty if none
+polarL = ./PolarFiles/polTN4448.txt # 
+	polar files to use on each left-wing segment between the discontinuities, all on the same line!
+polarR = ./PolarFiles/polTN4448.txt # 
+	polar files to use on each left-wing segment between the discontinuities, all on the same line!
+
+# Flaps defection
+yDiscFlaps =  # location of the section were the flaps defection changes, let empty if none
+deltaL = 0 # flaps deflection on the left half wing in degrees on each wing 
+	segment between the discontinuities, let empty if none
+deltaR = 0 # flaps deflection on the right half wing in degrees on each wing 
+	segment between the discontinuities, let empty if none. Must have the same number of values as deltaL
+
+
+# Twist
+yTwistDisc = # location of the sections were the twist rate changes, let empty if none
+twist =  # twist increment with respect to wing root section, negative : washin
+
+# Dihedral
+yDihDisc =  # location of the sections were the dihedral angle changes, let empty if none
+Dih = 0 # dihedral angle on each wing segment between the discontinuities
+
+
+# Engines
+nbE = 4 # number of engines
+D = 2.83 2.83 2.83 2.83 # propeler diameter in meters
+Rhub = 0.35 0.35 0.35 0.35 # radius of the engin hub
+xh = -1.92 -1.92 -1.92 -1.92 # x location of the propelers WITH RESPECT TO WING C/4 ROOT CHOORD
+yh = -5.49 -2.54 2.54 5.49 # y location of the propelers on the span
+zh = 0 0 0 0 # x location of the propelers WITH RESPECT TO WING C/4 ROOT CHOORD
+OWU = 0 1 1 0 # Outboard of the wing receives wind up direction
+Tc = 0.25 0.25 0.25 0.25
+J = 0.45 0.45 0.45 0.45
+
+# H-Tail
+# General tail geometry
+
+bT = 4.8859 # span of the tail in meters
+iT = -3 # incidence of the root section of the tail
+cRootT = 1.4051 # root chord in meters
+cTipT = 0.7742 # tip chord in meters
+twistTipT = 0 # twist of the tip , negative washout
+cfToCLocT = 0 # ratio of the flaps length on the local chord length
+hDistT = 5.6001 # Distance between C/4 tail and Wing, Pos if tail back of wing
+vDistT = 0.1524 # Vert Distance between C/4 tail and Wing, Pos if tail above of wing
+
+# Taper
+yTaperDiscT =  # location of the sections were the taper ratio changes, let empty if none
+chordT =  # array of the chord length at the section were the taper rate changes, let empty if none
+
+# Sweep
+ySweepDiscT =  # location of the sections were the swept angle changes, let empty if none
+sweepT = 8 # array of the swept angle at C/4 on each tail segment between the discontinuities, let empty if none
+
+# Twist
+yTwistDiscT =  # location of the sections were the twist rate changes, let empty if none
+twistT =  # twist increment wrt htail root chord axis, negative washin
+
+# Dihedral
+yDihDiscT =  # location of the sections were the dihedral angle changes, let empty if none
+DihT = 0 # dihedral angle on each tail segment between the discontinuities
+
+# Airfoil
+yDiscAfT =  # location of the sections were the airfoil changes, let empty if none
+airfoilT = 0012 # airfoil used on each tail segment between the discontinuities
+
+# Polar
+yDiscPolT =  # location of the section were the polar file to use changes, let empty if none
+polarTL = ./PolarFiles/naca0012XFoil.txt # polar files to use on each tail segment between the discontinuities, all on the same line!
+polarTR = ./PolarFiles/naca0012XFoil.txt #
+# Flaps defection
+
+yDiscFlapsT =  # location of the section were the flaps defection changes, let empty if none
+deltaT = 0 # flaps deflection in degrees on each tail segment between the discontinuities, let empty if none
+
+# V-Tail
+# General tail geometry
+
+bVT = 2.8859 # span of the tail in meters
+cRootVT = 1.792224 # root chord in meters
+cTipVT = 0.80772 # tip chord in meters
+cfToCLocVT = 0.25 # ratio of the flaps length on the local chord length
+hDistVT = 5.6001 # Distance between C/4 V-tail and Wing, Pos if tail back of wing
+vDistVT = 0.1524 # Vert Distance between C/4 V-tail and Wing, Pos if tail above of wing
+
+# Taper
+zTaperDiscVT =  # location of the sections were the taper ratio changes, let empty if none
+chordVT =  # array of the chord length at the section were the taper rate changes, let empty if none
+
+# Sweep
+zSweepDiscVT =  # location of the sections were the swept angle changes, let empty if none
+sweepVT = 8.3 # array of the swept angle at C/4 on each tail segment 
+	between the discontinuities, let empty if none
+
+
+# Airfoil
+zDiscAfVT =  # location of the sections were the airfoil changes, let empty if none
+airfoilVT = 0012 # airfoil used on each tail segment between the discontinuities
+
+# Polar
+zDiscPolVT = 0.75 2.25 # location of the section were the polar file to use changes, let empty if none
+polarVT = fpVT1.txt fpVT2.txt fpVT3.txt # polar files to use on each tail segment 
+	between the discontinuities, all on the same line!
+
+# Flaps defection
+zDiscFlapsVT = 0.75 2.25 # location of the section were the flaps defection changes, let empty if none
+deltaVT = 0 25 0 # flaps deflection in degrees on each tail segment 
+	between the discontinuities, positive : left deflection
+
+# Fuselage
+
+nL = 2.7 # Nose length of the fuselage, meters
+cL = 8.6 # Main cylinder length of the fuselage, meters
+bL = 2.7 # Bottom length of the fuselage, meters
+cD = 1.83 # diameter of the my cylinder of the fuselage, meters
+bD = 0.3 # diameter of the end of the bottom, meters (0 if end on a edge)
+hDistF = 4.67 # Distance btw nose’s top of the fuselage and wing C/4
+vDistF = 0.915 # Vertical distance nose fuselage-wing C/4, positive : high wing

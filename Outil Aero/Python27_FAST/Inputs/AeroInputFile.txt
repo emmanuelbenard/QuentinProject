@@ -1,0 +1,160 @@
+# --------------------------------------------------
+#     INPUT FILE FOR AERODYNAMIC CALCULATIONS      -
+# --------------------------------------------------
+
+# ---------------- OUTPUT LOCATION -----------------
+output = ./Resultats/ATR72.txt
+# --------------------------------------------------
+
+# -------------- NUMERICAL PARAMETERS --------------
+EIS = 0
+htail = 1
+vtail = 1
+fus = 1
+refPoint = 0 0
+linear = 0
+# --------------------------------------------------
+
+# --------------- FLIGHT CONDITIONS ----------------
+aMin = -10
+aMax = 20
+beta = 0.0
+deltaA = 0.1
+Mach = 
+V0 = 153.11
+h = 10.668
+# --------------------------------------------------
+
+# ------------- GENERAL WING GEOMETRY --------------
+b = 27.083
+cRoot = 3.009
+cTip = 1.143
+twistTip = 0.0
+cfToCLoc = 0.197
+iW = 0.0
+
+# --- TAPER
+yTaperDisc = 4.589
+chord = 2.34
+
+# --- SWEEP
+ySweepDisc =
+sweep = 3.0
+
+# --- TWIST
+yTwistDisc = 
+twist =
+
+# --- DIHEDRAL
+yDihDisc = 
+Dih = 0.0
+
+# --- AIRFOIL
+yDiscAf = 
+airfoil = ./PolarFiles/ATR72.dat
+
+# --- POLAR
+yDiscPol =
+polarL = ./PolarFiles/ATR72_df0.txt #
+polarR = ./PolarFiles/ATR72_df0.txt #
+
+# --- FLAPS DEFLECTION
+yDiscFlaps =
+deltaL = 0 
+deltaR = 0  
+
+# --- ENGINES
+nbE = 2.0
+D = 3.93 3.93 
+Rhub = 0.0 0.0 
+Omega = 1200.0 1200.0 
+T = 0 0 
+yh = -4.604 -4.604 4.604 4.604 
+xh = -3.66528428431 -3.66528428431 
+zh = 0.0 0.0 
+OWU = 1 1 
+Tc = 0.0 0.0 
+
+# --------------------------------------------------
+
+# ------------ GENERAL H-TAIL GEOMETRY -------------
+bT = 7.541
+cRootT = 2.23
+cTipT = 1.249
+twistTipT = 0.0 
+cfToCLocT = 0.0 
+iT = 0.0
+hDistT = 13.195
+vDistT = 0.
+
+# --- TAPER
+yTaperDiscT = 
+chordT = 
+
+# --- SWEEP
+ySweepDiscT =
+sweepT = 7.0
+
+# --- TWIST
+yTwistDiscT =
+twistT =
+
+# --- DIHEDRAL
+yDihDiscT =
+DihT = 0.0
+
+# --- AIRFOIL
+yDiscAfT = 
+airfoilT = 0012
+
+# --- POLAR
+yDiscPolT = 
+polarTL = ./PolarFiles/naca0012XFoil.txt #
+polarTR = ./PolarFiles/naca0012XFoil.txt #
+
+# --- FLAPS DEFLECTION
+yDiscFlapsT = 
+deltaT = 0.0 
+# --------------------------------------------------
+
+# ------------ GENERAL V-TAIL GEOMETRY -------------
+bVT = 3.842
+cRootVT = 3.01
+cTipVT = 1.505
+twistTipVT = 0 
+cfToCLocVT = 0 
+hDistVT = 12.118
+vDistVT = 1.708
+
+# --- TAPER
+zTaperDiscVT = 
+chordVT = 
+
+# --- SWEEP
+zSweepDiscVT = 
+sweepVT = 36.0
+
+# --- AIRFOIL
+zDiscAfVT = 
+airfoilVT = 0012
+
+# --- POLAR
+zDiscPolVT = 
+polarVT = ./PolarFiles/naca0012XFoil.txt #
+
+# --- FLAPS DEFLECTION
+zDiscFlapsVT = 
+deltaVT = 0.0 
+# --------------------------------------------------
+
+# ----------- GENERAL FUSELAGE GEOMETRY ------------
+nL = 5.096
+cL = 11.04
+bL = 10.792
+cD = 2.928
+bD = 0.0 
+hDistF = 11.136
+vDistF = 1.464
+# --------------------------------------------------
+
+# =============== END OF INPUT FILE ================
