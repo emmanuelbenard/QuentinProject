@@ -1,34 +1,17 @@
-Tuto rapide
+Rapid tuto
+
 :https://try.github.io/levels/1/challenges/1
 
 Pour démarrer
 Le dépôt
 Cloner le dépôt:
 
-git clone https://MONLOGIN@openforge.isae.fr/git/hpc-2017/
+git clone https://MONLOGIN@openforge.isae.fr/git/pie_12-2017-2018/
 Créer une branche à votre nom
 
-cd hpc-2017
-git branch MONLOGIN
-git checkout MONLOGIN
-envoyer vos modification vers le serveur (au moins à chaque séance)
+cd pie_12-2017-2018
+
+Envoyer vos modification vers le serveur (au moins à chaque séance)
 
 git push origin MONLOGIN
  Structure/compilation/execution du code
-Les fichiers source sont situés dans le repertoire src/solver.
-
-Pour compiler, il suffit d'executer dans src/solver:
-
-make install
-Si la compilation se déroule sans problème, un executable est créé dans le dossier bin
-
-Pour exécuter, il suffit d'aller dans le dossier cases et d'éxécuter (par exemple)
-
-mpirun -np 1 ../bin/solver param-dsl.txt
-Modification du code
-Rechercher les endroits à modifier
-
-grep -rin placetomodify *
-Attention: NE PAS MODIFIER LES LIGNES QUI CONTIENNENT CES LABELS pour d'éventuels changement au cours du projet.
-
-Modifié le: mardi 2 mai 2017, 11:22
