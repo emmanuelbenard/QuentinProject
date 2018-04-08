@@ -1,0 +1,44 @@
+close all
+clear all
+clc
+%% amplitude influence
+
+% choice the coefficient
+coefficient='Cl';
+% Amplitude of test
+Amp_list =[0.25 0.5 1 2 3 4 15];
+% kind of inputs 
+elevator = 4;
+aileron = 1;
+rudder = 1;
+run('amplitude_influence.m')
+
+%% Confidence interval (only for non-null coefficients)
+
+% choice the coefficient
+coefficient='Cn';
+run('Confidence_interval')
+
+
+%% model validation
+% two simulation 
+%% Simulation 1 for estimation of the coefficient
+% elevator
+Ae = Amp_elevator2;
+test_elevator = elevator2;
+% rudder
+Ar = Amp_rudder2;
+test_rudder = rudder2;
+% aileron
+Aa = Amp_aileron2;
+test_aileron = aileron2;
+% Simulation 2 for the validation by camparison with datas
+% elevator
+Ae = Amp_elevator2;
+test_elevator = elevator2;
+% rudder
+Ar = Amp_rudder2;
+test_rudder = rudder2;
+% aileron
+Aa = Amp_aileron2;
+test_aileron = aileron2;
